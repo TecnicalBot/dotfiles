@@ -1,10 +1,11 @@
 return {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    config = function()
-        require("catppuccin").setup({
-            transparent_background = true,
-        })
-        vim.cmd("colorscheme catppuccin")
-    end,
+    {
+        "folke/tokyonight.nvim",
+        name = "tokyonight",
+        priority = 1000,
+        config = function()
+            require("tokyonight").setup({})
+            vim.cmd("colorscheme tokyonight-night")
+        end,
+    },
 }

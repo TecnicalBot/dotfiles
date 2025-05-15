@@ -9,24 +9,17 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "ts_ls",
-                    "tailwindcss",
-                    "html",
-                    "cssls",
-                },
+                ensure_installed = { "lua_ls", "ts_ls", "html", "tailwindcss", "gopls", "pyright", "jinja_lsp" },
             })
         end,
     },
-
     {
         "neovim/nvim-lspconfig",
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
 
-            local servers = { "lua_ls", "tsserver", "tailwindcss", "html", "cssls" }
+            local lspconfig = require("lspconfig")
+            local servers = { "lua_ls", "ts_ls", "html", "tailwindcss", "gopls", "pyright", "jinja_lsp" }
 
             for _, server in ipairs(servers) do
                 lspconfig[server].setup({
