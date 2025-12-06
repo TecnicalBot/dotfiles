@@ -1,0 +1,5 @@
+require("config.lazy")
+require("config.opts")
+require("config.remap")
+require("utils")
+require("utils.floatingTerminal")

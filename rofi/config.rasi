@@ -1,0 +1,19 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+    modi: "drun,run,window,ssh";
+}
+
+@theme "~/.config/rofi/themes/style-11.rasi"
+
+window {
+  width: 900px;        // Set width in pixels
+  location: center;    // Optional: center on screen
+  anchor: center;
+}
+
+listview {
+  lines: 10;           // Controls the height (number of rows shown)
+  fixed-height: true;  // Ensures height doesn’t grow with content
+}
+

@@ -1,0 +1,17 @@
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = AC
+
+format-charging-prefix = " "
+format-charging = <label-charging>
+label-charging = %percentage%%
+
+format-discharging-prefix = "󰂎 "
+format-discharging = <label-discharging>
+label-discharging = %percentage%%
+
+format-full-prefix = "󰂐 "
+format-full = <label-full>
+label-full = %percentage%%
